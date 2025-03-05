@@ -8,7 +8,11 @@ function Home() {
         <>
             <Header />
             <main className="home">
-                <h1>Home Page</h1>
+                <div className="grid">
+                    <div className="col-10">
+                        <h1>Hi</h1>
+                    </div>
+                </div>
             </main>
             <Footer />
         </>
