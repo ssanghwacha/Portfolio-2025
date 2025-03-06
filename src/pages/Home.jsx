@@ -1,12 +1,10 @@
-import Header from '../global/Header';
-import Footer from '../global/Footer';
+import Footer from '../global/Footer'; // ✅ Footer만 유지
 
 import './Home.css';
 
 function Home() {
     return (
         <>
-            <Header />
             <main className="home">
                 <div className="grid">
                     <div className="col-10">

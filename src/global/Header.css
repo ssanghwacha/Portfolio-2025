@@ -1,8 +1,115 @@
-.site-header {
-    padding: 2rem 0;
+/* 전체 페이지 배경 검정 */
+body {
+    background-color: #000; /* ✅ 전체 배경 검정색 */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
 }
-.site-header ul {
+/* 기본 헤더 스타일 */
+.header {
+    width: 100%;
+    padding: 1rem 2rem;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+}
+
+/* 컨테이너 */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 로고 스타일 */
+.logo img {
+    height: 50px;
+    display: block;
+}
+
+/* 네비게이션 스타일 (데스크탑) */
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #7fff00;
+}
+
+/* 아이콘 스타일 */
+.icons {
+    display: flex;
+    align-items: center;
     gap: 1rem;
-    justify-content: end;
+}
+/* 아이콘 스타일 */
+.icons svg {
+    color: white;
+    width: 28px; /* 크기 맞추기 */
+    height: 28px;
+    padding: 6px; /* 내부 여백 맞추기 */
+    border-radius: 50%; /* 버튼 스타일과 통일 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box; /* ✅ 패딩 계산 오류 방지 */
+}
+
+.icons svg:hover {
+    color: #7fff00;
+}
+/* 햄버거 메뉴 버튼 */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 40px; /* 버튼 크기 */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px; /* GlobeIcon, BellIcon과 동일한 패딩 */
+    border-radius: 50%;
+    box-sizing: content-box; /* ✅ 패딩 계산 오류 방지 */
+  }
+  
+
+/* 반응형 (모바일) */
+@media screen and (max-width: 768px) {
+    /* 햄버거 버튼 보이기 */
+    .menu-btn {
+        display: flex;
+    }
+
+    /* 네비게이션 숨기기 (기본 상태) */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    /* 메뉴가 열렸을 때 보이게 하기 */
+    .nav.open {
+        display: flex;
+    }
 }
