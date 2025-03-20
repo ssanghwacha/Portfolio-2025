@@ -16,7 +16,6 @@ function Header() {
                         <img src={logo} alt="Chacha Logo" />
                     </Link>
                 </div>
-
                 {/* nav */}
                 <nav className={`nav ${menuOpen ? 'open' : ''}`}>
                     <Link to="/about">About</Link>
