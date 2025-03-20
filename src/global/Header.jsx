@@ -10,21 +10,21 @@ function Header() {
     return (
         <header className="header">
             <div className="container">
-                {/* 로고 */}
+                {/* logo */}
                 <div className="logo">
                     <Link to="/">
                         <img src={logo} alt="Chacha Logo" />
                     </Link>
                 </div>
 
-                {/* 네비게이션 메뉴 */}
+                {/* nav */}
                 <nav className={`nav ${menuOpen ? 'open' : ''}`}>
                     <Link to="/about">About</Link>
                     <Link to="/work">Work</Link>
                     <Link to="/contact">Contact</Link>
                 </nav>
 
-                {/* 우측 아이콘 및 햄버거 버튼 */}
+                {/* right nav */}
                 <div className="icons">
                     <GlobeIcon size={20} />
                     <BellIcon size={20} />
