@@ -1,0 +1,59 @@
+/* Contact.css */
+
+/* 전체 페이지 배경 검정 */
+.contact-page {
+    background-color: #000;
+    min-height: 100vh; /* 화면 가득 채우기 */
+    display: flex; /* 카드들을 가로로 배치 (원한다면) */
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* 카드 간 간격 */
+    padding: 2rem;
+    position: relative;
+}
+
+/* 카드 공통 스타일 */
+.contact-card {
+    position: relative;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* 텍스트 색상은 각 배경별로 달라질 수 있으니, 아래에서 구분 */
+}
+
+/* 화살표 아이콘 (우측 하단에 배치) */
+.arrow-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+/* 배경색별 카드 */
+.green-card {
+    background-color: #46ff8a; /* 형광 그린 */
+    color: #000; /* 텍스트는 검정 */
+}
+
+.white-card {
+    background-color: #fff;
+    color: #333;
+}
+
+.blue-card {
+    background-color: #3f79ff; /* 파란색 (원하는 색상으로) */
+    color: #fff;
+}
+
+/* 텍스트 크기 조정 */
+.contact-card small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.contact-card h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}

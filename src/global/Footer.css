@@ -1,3 +1,83 @@
-.site-footer {
-    padding: 2rem 0;
+/* 전체 푸터 컨테이너 */
+.footer {
+    position: relative;
+    width: 100%; /* 부모 폭 100% */
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    font-family: sans-serif;
+    z-index: 9997;
+}
+
+/* 상단 검정 영역 */
+.footer__top {
+    width: 100%; /* 전체 폭 사용 */
+    background-color: #1a1a1a; /* 짙은 회색/검정 느낌 */
+    display: flex;
+    justify-content: center; /* .footer__grid를 가로 중앙 정렬 */
+    padding: 2rem 0; /* 상하 여백 예시 */
+}
+.footer__grid {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 왼쪽 영역 */
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__left img {
+    width: 150px;
+    margin: 0;
+}
+
+.footer__name {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.footer__copyright {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* 오른쪽 영역 (링크 목록) */
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+}
+
+.footer__right a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.footer__right a:hover {
+    color: #46ff8a;
+}
+
+/* 화살표 아이콘 (↗) */
+.arrow {
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+}
+
+/* 하단 초록색 바 */
+.footer__bottom {
+    background-color: #46ff8a; /* 밝은 그린 */
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
 }

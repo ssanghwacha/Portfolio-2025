@@ -1,115 +1,55 @@
-/* 전체 페이지 배경 검정 */
-body {
-    background-color: #000; /* ✅ 전체 배경 검정색 */
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-}
-/* 기본 헤더 스타일 */
+/* Header.css */
 .header {
     width: 100%;
-    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 9999;
+    top: 0; /* 상단에 고정 */
+    left: 0;
+}
+/* 자식: 실제 내용(로고, 메뉴, 아이콘) 배치 */
+.header_container {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    margin: 17px 0;
 }
-
-/* 컨테이너 */
-.container {
+/* 로고 영역 */
+.header__logo img {
+    height: 44px; /* 로고 높이 예시 */
+}
+/* 네비게이션 */
+.header__nav {
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
+    gap: 1.5rem; /* 링크 간격 */
 }
 
-/* 로고 스타일 */
-.logo img {
-    height: 50px;
-    display: block;
+.header__nav a {
+    text-decoration: none; /* 밑줄 제거 */
+}
+.header__nav p {
+    font-family: 'Inter', sans-serif;
+    font-weight: regular;
+    font-size: 22px;
+    color: #e0e0e0;
 }
 
-/* 네비게이션 스타일 (데스크탑) */
-.nav {
+.header__nav p:hover {
+    color: #46ff8a; /* 마우스 올렸을 때 색상 예시 */
+}
+.header__icons {
     display: flex;
-    gap: 2rem;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: #7fff00;
-}
-
-/* 아이콘 스타일 */
-.icons {
-    display: flex;
-    align-items: center;
     gap: 1rem;
 }
-/* 아이콘 스타일 */
-.icons svg {
-    color: white;
-    width: 28px; /* 크기 맞추기 */
-    height: 28px;
-    padding: 6px; /* 내부 여백 맞추기 */
-    border-radius: 50%; /* 버튼 스타일과 통일 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: content-box; /* ✅ 패딩 계산 오류 방지 */
-}
 
-.icons svg:hover {
-    color: #7fff00;
-}
-/* 햄버거 메뉴 버튼 */
-.menu-btn {
-    background: none;
-    border: none;
+.header__icons .MuiSvgIcon-root {
+    color: #e0e0e0;
+    font-size: 30px;
     cursor: pointer;
-    color: white;
-    width: 40px; /* 버튼 크기 */
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px; /* GlobeIcon, BellIcon과 동일한 패딩 */
-    border-radius: 50%;
-    box-sizing: content-box; /* ✅ 패딩 계산 오류 방지 */
-  }
-  
-
-/* 반응형 (모바일) */
-@media screen and (max-width: 768px) {
-    /* 햄버거 버튼 보이기 */
-    .menu-btn {
-        display: flex;
-    }
-
-    /* 네비게이션 숨기기 (기본 상태) */
-    .nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-
-    /* 메뉴가 열렸을 때 보이게 하기 */
-    .nav.open {
-        display: flex;
-    }
+}
+.header__icons .MuiSvgIcon-root:hover {
+    color: #46ff8a;
 }

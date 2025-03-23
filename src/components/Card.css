@@ -1,0 +1,20 @@
+/* Card.css */
+.card {
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 9998;
+    aspect-ratio: 16/9;
+}
+
+.card__image {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* 필요하다면 */
+}
+
+.card__content {
+    padding: 1rem;
+    color: #ccc;
+}

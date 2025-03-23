@@ -1,42 +1,45 @@
-import { useState } from 'react';
+// Header.jsx
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { GlobeIcon, BellIcon, MenuIcon, XIcon } from 'lucide-react'; // 햄버거 메뉴 아이콘 추가
-import './Header.css';
+//icon
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+
+// 로고 이미지 가정
 import logo from '../assets/logo.png';
+import './Header.css';
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="header">
-            <div className="container">
-                {/* logo */}
-                <div className="logo">
+        <header className={`header ${menuOpen ? 'open' : ''}`}>
+            <div className="header_container">
+                {/* 로고 */}
+                <div className="header__logo">
                     <Link to="/">
                         <img src={logo} alt="Chacha Logo" />
                     </Link>
                 </div>
-                {/* nav */}
-                <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-                    <Link to="/about">About</Link>
-                    <Link to="/work">Work</Link>
-                    <Link to="/contact">Contact</Link>
+
+                {/* 내비게이션 */}
+                <nav className="header__nav">
+                    <Link to="#">
+                        {/* p 태그 안의 기본 텍스트: About, 호버 시 data-hover="ABOUT"이 올라옴 */}
+                        <p data-hover="ABOUT">About</p>
+                    </Link>
+                    <Link to="/work">
+                        <p data-hover="WORK">Work</p>
+                    </Link>
+                    <Link to="/contact">
+                        <p data-hover="CONTACT">Contact</p>
+                    </Link>
                 </nav>
 
-                {/* right nav */}
-                <div className="icons">
-                    <GlobeIcon size={20} />
-                    <BellIcon size={20} />
-                    <button
-                        className="menu-btn"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        {menuOpen ? (
-                            <XIcon size={24} />
-                        ) : (
-                            <MenuIcon size={24} />
-                        )}
-                    </button>
+                {/* 아이콘 영역 */}
+                <div className="header__icons">
+                    <LanguageOutlinedIcon />
+                    <NotificationsNoneOutlinedIcon />
                 </div>
             </div>
         </header>

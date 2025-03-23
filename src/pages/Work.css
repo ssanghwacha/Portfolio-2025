@@ -1,0 +1,89 @@
+/* Work.css */
+
+/* 전체 페이지 검정 배경 */
+.work-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif; /* 예시 */
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.work-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+.hero-image {
+    max-width: 600px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Works Section */
+.works-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+.works-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.card-link {
+    text-decoration: none;
+    color: #fff;
+}
+.work-item {
+    background-color: #222; /* 카드 배경 */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.work-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.work-info {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.work-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+.tag {
+    background-color: #333;
+    color: #ccc;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* View All Button */
+.view-all-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.8rem 2rem;
+    background-color: #46ff8a; /* 형광 그린 */
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.view-all-btn:hover {
+    background-color: #66ffaa;
+}
