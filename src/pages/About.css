@@ -53,22 +53,29 @@
 
 @media (max-width: 768px) {
     .about-page {
-        flex-direction: column;
-        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
     }
 
     .about-content {
         margin-right: 0;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        width: 80%;
     }
 
     .about-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-
+    .about-content p {
+        font-size: 1rem;
+    }
     .about-image {
-        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 100px;
+        margin-bottom: -80px;
     }
 
     .about-image img {

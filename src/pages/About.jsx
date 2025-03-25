@@ -8,13 +8,8 @@ function About() {
             <main className="about-page">
                 <div className="about-content">
                     <h1>
-                        I’m Sangwha Cha,
-                        <br />
-                        a UX/UI designer
-                        <br />
-                        with a background
-                        <br />
-                        in brand design.
+                        I’m Sangwha Cha, a UX/UI designer with a background in
+                        brand design.
                     </h1>
                     <p className="about-description">
                         I create digital experiences that not only function
