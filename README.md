@@ -1,8 +1,40 @@
-# React + Vite
+SangwhaCha Portfolio 2025
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Overview
+   Portfolio-2025 is a React.js project
+   • Multi-page navigation with React Router
+   • Scroll animations and 3D scene (GSAP, Spline)
+   • Icon usage with MUI Icons
+   • Layout file with <Outlet> for shared Header/Footer
+   • Responsive design
+   • useState and useEffect hooks
 
-Currently, two official plugins are available:
+2. -Installation
+   git clone https://github.com/ssanghwacha/Portfolio-2025.git
+   cd Portfolio-2025
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    -Install dependencies
+    npm install
+
+3.Project Structure
+Portfolio-2025/
+├─ public/
+├─ src/
+│ ├─ assets/
+│ ├─ components/
+│ ├─ global/ # Header, Footer
+│ ├─ pages/ # Home, About, Work, Contact
+│ ├─ Layout.jsx # Contains <Header />, <Footer />, <Outlet />
+│ ├─ App.jsx # Defines routes
+│ ├─ main.jsx # Entry point
+│ └─ ...
+├─ .gitignore
+├─ package.json
+├─ README.md
+└─ vite.config.js
+
+4.Third-Party Packages 1. React Router
+-For multi-page routing and <Outlet> usage. 2. MUI Icons (@mui/icons-material)
+-For icons such as Menu, Close, Bell, and Language. 3. GSAP
+-For scroll animations or 3D integration. 4. @splinetool/react-spline
+For integrating 3D Spline scenes into Hero.
