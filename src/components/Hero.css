@@ -3,19 +3,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* 화면 꽉 채우는 예시 */
+    height: 100vh; 
     overflow: hidden;
     z-index: 999;
 }
-
-/* Spline이 내부에서 canvas를 렌더링 */
 .hero canvas {
     width: 100%;
     height: 100%;
     display: block;
 }
-
-/* 3D 위에 텍스트 등을 겹치려면 절대 위치 */
 .hero__content {
     position: absolute;
     top: 50%;
@@ -23,4 +19,28 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+}
+.hero__content h1 {
+    font-size: 8rem;
+    margin-bottom: -50px;
+}
+.hero__content p {
+    font-size: 4rem;
+}
+@media (max-width: 768px) {
+    .hero__content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .hero__content h1 {
+        font-size: 3rem;
+        margin-bottom: -10px;
+    }
+    .hero__content p {
+        font-size: 2rem;
+    }
 }

@@ -1,95 +1,68 @@
-/* 전체 페이지 검정 배경 */
 .contact-page {
     background-color: #000;
     min-height: 100vh;
     position: relative;
-    /* 카드들을 절대 배치하기 위해 부모를 position: relative로 설정 */
     overflow: hidden;
-    /* 필요시 스크롤 숨김 (선택) */
     display: flex;
     width: 100%;
 }
-
-/* 공통 카드 스타일 */
 .contact-card {
-    position: absolute; /* 절대 배치 */
+    position: absolute;
     border-radius: 16px;
-    padding: 1.5rem 2rem;
+    padding: 2rem 3rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    width: 300px; /* 카드 기본 너비 (적절히 조정) */
-
-    /* 텍스트 배치 */
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
-/* 녹색 카드 */
 .green-card {
     background-color: #46ff8a;
     color: #000;
-
-    /* 스크린샷 기준 대략 왼쪽 아래쪽에 배치 */
     top: 50%;
-    left: 15%;
+    left: 35%;
     transform: translate(-15%, -50%);
-    /* ↑ 원하는 좌표로 조정 */
 }
-
-/* 흰색 카드 */
 .white-card {
     background-color: #fff;
     color: #333;
-
-    /* 스크린샷 기준 녹색 카드보다 위에, 오른쪽에 걸쳐진 느낌 */
-    top: 40%;
-    left: 55%;
+    top: 35%;
+    left: 60%;
     transform: translate(-50%, -50%);
 }
-
-/* 파란 카드 */
 .blue-card {
     background-color: #3f79ff;
     color: #fff;
-
-    /* 스크린샷 기준 녹색 카드보다 아래쪽, 오른쪽 */
     top: 60%;
-    left: 40%;
+    left: 70%;
     transform: translate(-50%, -50%);
 }
-
-/* 작은 텍스트 */
 .contact-card small {
-    font-size: 0.9rem;
+    font-size: 2rem;
     opacity: 0.8;
     margin: 0;
 }
-
-/* 큰 텍스트 */
 .contact-card h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     margin: 0;
     line-height: 1.2;
 }
 @media (max-width: 768px) {
     .contact-page {
-        /* 가로 배치 대신 세로 스택 */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem; /* 카드 간 간격 */
+        gap: 1rem;
         width: 100%;
     }
-
     .contact-card {
         display: flex;
-        width: 90%; /* 카드 폭을 90%로 */
-        /* 절대 배치 해제 → 자연스러운 스택 */
+        width: 90%;
         position: static;
         transform: none;
-        width: 80%; /* 모바일에서 카드 폭 조절 */
+        width: 80%;
         max-width: 400px;
-        margin: 0 auto; /* 가운데 정렬 */
+        margin: 0 auto;
     }
 }

@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +7,6 @@ import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import MenuIcon from '@mui/icons-material/Menu'; // 햄버거 아이콘
 import CloseIcon from '@mui/icons-material/Close'; // X 아이콘
 
-// 로고 이미지 가정
 import logo from '../assets/logo.png';
 import './Header.css';
 
@@ -18,14 +16,13 @@ function Header() {
     return (
         <header className={`header ${menuOpen ? 'open' : ''}`}>
             <div className="header_container">
-                {/* 로고 */}
+                
                 <div className="header__logo">
                     <Link to="/">
                         <img src={logo} alt="Chacha Logo" />
                     </Link>
                 </div>
 
-                {/* 내비게이션 (데스크톱) */}
                 <nav className="header__nav">
                     <Link to="/about">
                         <p data-hover="ABOUT">About</p>
@@ -38,21 +35,20 @@ function Header() {
                     </Link>
                 </nav>
 
-                {/* 아이콘 영역 + 햄버거 */}
                 <div className="header__icons">
                     <LanguageOutlinedIcon />
                     <NotificationsNoneOutlinedIcon />
 
-                    {/* 햄버거/Close 아이콘 (모바일에서만 보임) */}
+                    {/* close */}
                     {menuOpen ? (
                         <CloseIcon
-                            sx={{ color: '#000 !important' }} // 닫기 아이콘 → 검정
+                            sx={{ color: '#000 !important' }} 
                             className="menu-icon"
                             onClick={() => setMenuOpen(false)}
                         />
                     ) : (
                         <MenuIcon
-                            sx={{ color: '#fff' }} // 햄버거 아이콘 → 흰색
+                            sx={{ color: '#fff' }} 
                             className="menu-icon"
                             onClick={() => setMenuOpen(true)}
                         />
@@ -60,7 +56,6 @@ function Header() {
                 </div>
             </div>
 
-            {/* 모바일 전체화면 메뉴 (녹색 오버레이) */}
             {menuOpen && (
                 <div className="mobile-menu">
                     <div className="mobile-menu__content">

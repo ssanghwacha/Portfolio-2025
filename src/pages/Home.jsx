@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Card from '../components/Card';
@@ -11,9 +12,15 @@ import './Home.css';
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/work');
+    };
+
     useEffect(() => {
-        // 1) .card 애니메이션
-        gsap.utils.toArray('.card').forEach((card, index) => {
+        // 1) .card 
+        gsap.utils.toArray('.card').forEach((card) => {
             gsap.fromTo(
                 card,
                 { opacity: 0, y: 50, scale: 0.95 },
@@ -31,8 +38,8 @@ function Home() {
             );
         });
 
-        // 2) .stacking-card 애니메이션
-        gsap.utils.toArray('.stacking-card').forEach((section, index) => {
+        // 2) .stacking-card 
+        gsap.utils.toArray('.stacking-card').forEach((section) => {
             gsap.fromTo(
                 section,
                 { clipPath: 'inset(10% 0% 0% 0%)' },
@@ -71,7 +78,10 @@ function Home() {
                     title="Project 2Sec"
                     description="Blazing fast project."
                 />
-                <button className="view-all-btn">View All</button>
+
+                <button className="view-all-btn" onClick={handleClick}>
+                    View All
+                </button>
             </section>
         </main>
     );

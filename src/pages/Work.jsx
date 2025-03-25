@@ -1,10 +1,8 @@
-// Work.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import './Work.css';
 
-// 임시 이미지들
 import workImg1 from '../assets/Home/2sec_main.png';
 import workImg2 from '../assets/Home/Altra_main.png';
 import workImg3 from '../assets/Home/BeeHere_main.png';
@@ -15,7 +13,7 @@ import workImg6 from '../assets/Home/velot_main.png';
 function Work() {
     return (
         <main className="work-page">
-            {/* Hero Section (Optional) */}
+            {/* Hero Section */}
             <section className="work-hero">
                 <Spline scene="https://prod.spline.design/BDa6y8nR0-1JwKgB/scene.splinecode" />
             </section>
@@ -79,7 +77,6 @@ function Work() {
                         </Link>
                     </div>
                 </div>
-               
             </section>
         </main>
     );
