@@ -19,7 +19,7 @@ function Home() {
     };
 
     useEffect(() => {
-        // 1) .card 
+        // 1) .card
         gsap.utils.toArray('.card').forEach((card) => {
             gsap.fromTo(
                 card,
@@ -38,7 +38,7 @@ function Home() {
             );
         });
 
-        // 2) .stacking-card 
+        // 2) .stacking-card
         gsap.utils.toArray('.stacking-card').forEach((section) => {
             gsap.fromTo(
                 section,
