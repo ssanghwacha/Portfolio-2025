@@ -1,0 +1,34 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+.research-section {
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    background-color: #252523;
+}
+
+.research-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.insight-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.insight-paragraph {
+    font-weight: 200;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    opacity: 90;
+    margin-bottom: 40px;
+}
+mark {
+    background-color: #46ff8a;
+    color: #000;
+}

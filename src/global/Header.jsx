@@ -1,22 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-//icon
+// icon
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import MenuIcon from '@mui/icons-material/Menu'; // 햄버거 아이콘
-import CloseIcon from '@mui/icons-material/Close'; // X 아이콘
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import logo from '../assets/logo.png';
 import './Header.css';
 
-function Header() {
+function Header({ hideOnScroll }) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        if (!hideOnScroll) return;
+
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setHidden(true); // 스크롤 내릴 때 숨김
+            } else {
+                setHidden(false); // 올릴 때 보이기
+            }
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [hideOnScroll]);
 
     return (
-        <header className={`header ${menuOpen ? 'open' : ''}`}>
+        <header
+            className={`header ${menuOpen ? 'open' : ''} ${
+                hideOnScroll && hidden ? 'hide' : ''
+            }`}
+        >
             <div className="header_container">
-                
                 <div className="header__logo">
                     <Link to="/">
                         <img src={logo} alt="Chacha Logo" />
@@ -38,17 +61,15 @@ function Header() {
                 <div className="header__icons">
                     <LanguageOutlinedIcon />
                     <NotificationsNoneOutlinedIcon />
-
-                    {/* close */}
                     {menuOpen ? (
                         <CloseIcon
-                            sx={{ color: '#000 !important' }} 
+                            sx={{ color: '#000 !important' }}
                             className="menu-icon"
                             onClick={() => setMenuOpen(false)}
                         />
                     ) : (
                         <MenuIcon
-                            sx={{ color: '#fff' }} 
+                            sx={{ color: '#fff' }}
                             className="menu-icon"
                             onClick={() => setMenuOpen(true)}
                         />

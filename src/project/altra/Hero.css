@@ -1,0 +1,58 @@
+/* Hero.css */
+.hero-section {
+    width: 100vw;
+    height: 40rem;
+    background-color: #252523;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.hero-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    color: #46ff8a;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background-color: #252523;
+    line-height: 1.6;
+}
+.hero-section {
+    width: 100vw;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #63ff6c;
+    background-color: #252523;
+}
+
+.hero-spacer {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #252523;
+}
+
+.hero-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    display: block;
+}
