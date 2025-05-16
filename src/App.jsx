@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import StyleGuide from './pages/StyleGuide';
 import Layout from './Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -16,6 +17,7 @@ function App() {
                 <Route path="work" element={<Work />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="project/altra" element={<Altra />} />
+                <Route path="/styleguide" element={<StyleGuide />} />
             </Route>
         </Routes>
     );
